@@ -5,9 +5,7 @@ This readme will be updated soon
 
 Installation instructions:
 
-First we need to clone our github repository on its alpha version branch. On your local terminal, please run
-
-git clone -b alpha_1.0 --single-branch https://github.com/forrestpark/AtypicalSpeech.git
+First we need to clone our github repository on its alpha version branch. 
 
 Now we need to install necessary packages and libraries to run the cloned repository code, one pack for server side code and another for client side. To do this, from the repository’s root folder AtypicalSpeech, please run
 
