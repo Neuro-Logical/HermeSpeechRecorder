@@ -1,0 +1,211 @@
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.central_recorder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    justify-content: space-evenly;
+}
+
+.utterance_display_whole {
+    color: white;
+    background-color: dodgerblue;
+    /* padding: 10px; */
+    font-family: Arial;
+    height: max-content;
+    width: max-content;
+}
+
+.utterance_display {
+    font-size: 25px;
+    font-family: Arial;
+    color: white;
+    background-color: dodgerblue;
+    padding: 20px;
+}
+
+.utterance_display_bold {
+    overflow-wrap: break-word;
+    font-size: 40px;
+    font-family: Arial;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bolder;
+    /* padding-right: 10px; */
+    /* inline-size: 150px; */
+}
+
+.unassign_scripts_select_modal {
+    color: white;
+    background-color: dodgerblue;
+    /* padding: 10px; */
+    font-family: Arial;
+}
+
+.large_font_blue_center {
+    font-size: 25px;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.large_font_blue_left {
+    font-size: 25px;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    color: dodgerblue;
+    /* padding: 20px; */
+    padding-bottom: 20px;
+    text-align: left;
+    justify-content: left;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.logo {
+    width: 30%;
+    height: 30%;
+}
+
+.welcome_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(16, 53, 114);
+    height: 100vh;
+}
+
+.welcome_page .top{
+    padding: 40px 0;
+    display: block;
+    text-align: center;
+    font-family: times;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.welcome_page .center{
+    
+}
+
+.welcome_page .bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.jhu_som_logo {
+    width: 226px;
+    height: 174px;
+    opacity: 0.92;
+}
+
+.jhu_wse_logo {
+    width: 180px;
+    height: 139px;
+    opacity: 0.92;
+    position: relative;
+    top: 21px;
+}
+
+.login_button {
+    top: 30px;
+    text-align: center;
+}
+
+.dashboard_card {
+    width: 80%;
+}
+
+.access_code {
+    text-align: center;
+    color:lightsteelblue;
+}
+
+.review_recording {
+    font-size: 15px;
+    font-family: Arial;
+    color: blue;
+    /* background-color: dodgerblue; */
+    /* padding: 20px; */
+}
+
+.font_black {
+    color: black;
+}
+
+.vertical_center {
+    padding: 20% 0;
+}
+
+.padding_bottom_20 {
+    padding-bottom: 20px;
+}
+
+.progress_bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden; 
+}
+
+.button_right_align {
+    right: 30px;
+}
+
+.vertical-center {
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    margin-left: 10px;
+  }
+
+.float-container {
+    /* border: 3px solid #fff; */
+    /* padding: 10px; */
+    height: max-content;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.float-left-child {
+    width: 20%;
+    float: left;
+    padding: 10px;
+    height: max-content;
+    /* border: 2px solid green; */
+} 
+
+.float-right-child {
+    width: 80%;
+    float: right;
+    overflow-wrap: break-word;
+    font-size: 40px;
+    font-family: Arial;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bolder;
+    /* padding: 10px; */
+    /* border: 2px solid red; */
+    line-height: 50px;
+}
+
+.disable_all_clicks {
+    pointer-events:none;
+}
+
+.display_none {
+    display: none;
+}
+
+.visibility_hidden {
+    visibility: hidden;
+}
