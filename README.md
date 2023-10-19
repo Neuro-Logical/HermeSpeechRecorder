@@ -121,6 +121,18 @@ Max Zinkus
 
 * 0.1
     * Initial Release
+      
+## How to cite
+
+J. Park, M. Zinkus, J. Huang, A. Butala, J. Zhang, L. Clawson, S. Cust, V. Chovaz, N. Dehak, H. Wang, L. Moro Velazquez (2023) Hermespeech recorder: a new open-source web platform to record speech to the cloud. Proc. MAVEBA 2023, 91-94.
+
+@inproceedings{park2023herme,
+  title={Hermespeech recorder: a new open-source web platform to record speech to the cloud},
+  author={Park, Jang-Woo, and Zinkus, Maximilian and Huang, Jim and Butala, Ankur and Zhang, Jayne and Clawson, Lora and Cust, Sarah and Chovaz, Victoria and Dehak, Najim and Wang, Helin and Moro-Velazquez, Laureano},
+  booktitle={13th International Workshop on Models and Analysis of Vocal Emissions for Biomedical Applications (MAVEBA)},
+  pages={91--94},
+  year={2023}
+}
 
 ## License
 
