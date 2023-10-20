@@ -1,4 +1,4 @@
-# Project Title
+# Hermespeech Recorder
 
 HermeSpeech Recorder is a user-friendly and
 open-source platform designed to record speech from a
