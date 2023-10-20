@@ -22,7 +22,29 @@ a HIPAA compliant and efficient manner. Finally, we
 describe our experience recording a group of participants
 with atypical speech using this open-source tool.
 
+![](https://github.com/Neuro-Logical/HermeSpeechRecorder/blob/master/usage.gif)
+
+More information can be found at https://www.researchgate.net/publication/374840882_HERMESPEECH_RECORDER_A_NEW_OPEN-SOURCE_WEB_PLATFORM_TO_RECORD_SPEECH_TO_THE_CLOUD#fullTextFileContent
+
 ## Getting Started
+
+
+
+### Installing
+
+* For local installations, please follow the instructions below:
+  1. Clone your desired version of this AtypicalSpeech repository. On your local terminal, please run something along the lines of ```git clone https://github.com/forrestpark/AtypicalSpeech.git```
+  2. Install necessary packages and libraries to run the cloned repository, one pack for server side code and another for client side. To do this, from the repository’s root folder AtypicalSpeech, please run `npm install` and `cd client && npm install`.
+  3. Download and install MySQL for our server side code and database to work. Please download MySQL and MySQL Workbench, respectively, from the following links:
+     * MySQL: https://dev.mysql.com/downloads/mysql/
+     * MySQL Workbench: https://dev.mysql.com/downloads/workbench/
+     While you’re downloading and installing MySQL, you will be asked to create a root account. Please create a root account using root as the ID and use a password of your choice. Make sure you update the password on line 4 of [config/config.json](https://github.com/maxzinkus/AtypicalSpeech/blob/master/config/config.json) after you create an account so that the code’s credentials match with your MySQL’s credentials.
+  4. Once you have MySQL and MySQL Workbench downloaded, open MySQL Workbench, and create a new schema named `speech_db`. The name has to be exactly `speech_db` for the program to start.
+  5. We’re done configuring! To start the program on your local environment, please run the following commands from the root folder `AtypicalSpeech`:
+     * `npm start`
+     * `cd client && npm start`
+  6. You should now be able to open the main entry point and dashboard via http://localhost:3001 and the admin dashboard via http://localhost:3001/admin
+
 
 ### Dependencies
 
@@ -85,25 +107,6 @@ with atypical speech using this open-source tool.
 * sequelize: A library for object-relational mapping (ORM) in Node.js.
 * sequelize-cli: A command-line interface for Sequelize.
 
-### Installing
-
-* For local installations, please follow the instructions below:
-  1. Clone your desired version of this AtypicalSpeech repository. On your local terminal, please run something along the lines of ```git clone https://github.com/forrestpark/AtypicalSpeech.git```
-  2. Install necessary packages and libraries to run the cloned repository, one pack for server side code and another for client side. To do this, from the repository’s root folder AtypicalSpeech, please run `npm install` and `cd client && npm install`.
-  3. Download and install MySQL for our server side code and database to work. Please download MySQL and MySQL Workbench, respectively, from the following links:
-     * MySQL: https://dev.mysql.com/downloads/mysql/
-     * MySQL Workbench: https://dev.mysql.com/downloads/workbench/
-     While you’re downloading and installing MySQL, you will be asked to create a root account. Please create a root account using root as the ID and use a password of your choice. Make sure you update the password on line 4 of [config/config.json](https://github.com/maxzinkus/AtypicalSpeech/blob/master/config/config.json) after you create an account so that the code’s credentials match with your MySQL’s credentials.
-  4. Once you have MySQL and MySQL Workbench downloaded, open MySQL Workbench, and create a new schema named `speech_db`. The name has to be exactly `speech_db` for the program to start.
-  5. We’re done configuring! To start the program on your local environment, please run the following commands from the root folder `AtypicalSpeech`:
-     * `npm start`
-     * `cd client && npm start`
-  6. You should now be able to open the main entry point and dashboard via http://localhost:3001 and the admin dashboard via http://localhost:3001/admin
-
-## Help
-
-Please contact our team at jpark278@jhu.edu, jhuan185@jhu.edu, or laureano@jhu.edu.
-
 ## Authors
 
 Jang Woo Park 
@@ -113,6 +116,7 @@ Jim Huang
 [@ameriania](https://github.com/ameriania)
 
 Laureano Moro Velazquez
+[@lauremoro](https://github.com/lauremoro)
 
 Max Zinkus
 [@maxzinkus](https://github.com/maxzinkus)
@@ -133,6 +137,8 @@ J. Park, M. Zinkus, J. Huang, A. Butala, J. Zhang, L. Clawson, S. Cust, V. Chova
   pages={91--94},
   year={2023}
 }
+
+
 
 ## License
 
