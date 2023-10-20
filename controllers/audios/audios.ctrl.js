@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fileType = require('file-type')
+const archiver = require('archiver');
 
 const uploadDir = path.resolve(__dirname, '../../uploads');
 
@@ -64,12 +65,35 @@ exports.download_single_audio = async (req, res) => {
     }
 }
 
-// exports.download_all_audios = async (req, res) => {
-//     try {
-//         const { filename } = req.body;
-//         const file = path.join(uploadDir, filename);
-//         res.download(file)
-//     } catch (error) {
-//         return res.status(500).json(error)
-//     }
-// }
+exports.download_in_zip = async (req, res) => {
+    try {
+        const { filenames } = req.body;
+
+        // Define zip filename
+        res.attachment('audios.zip');
+
+        // Initiate archiver
+        const archive = archiver('zip', {
+            zlib: { level: 9 } // Compression level
+        });
+
+        archive.on('error', (err) => {
+            res.status(500).send({ error: err.message });
+        });
+
+        // Send the archive data to the output stream (response)
+        archive.pipe(res);
+
+        // Use createReadStream to add files to the archive
+        filenames.forEach(filename=>{
+            const file = path.join(uploadDir, filename);
+            const fileStream = fs.createReadStream(file);
+            archive.append(fileStream, { name: filename });
+        })
+
+        // Finalize the archive
+        archive.finalize();
+    } catch (error) {
+        return res.status(500).json(error)
+    }
+}

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/forrestpark/AtypicalSpeech#readme",
   "dependencies": {
+    "archiver": "^6.0.1",
     "axios": "^1.2.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.3",

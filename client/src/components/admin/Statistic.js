@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Table, Space } from 'antd';
+import { Button, Table, Space, Input} from 'antd';
 import axios from 'fetch';
+
+const { Search } = Input;
 
 const download = async (filename)=>{
 
@@ -48,6 +50,7 @@ const App = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([])
+  const [oriData, setOriData] = useState([])
 
   useEffect(()=>{
     (async ()=>{
@@ -55,25 +58,49 @@ const App = () => {
       const { data } = res
       const tmp = data.map((item, index)=>{
         return {
-          key: item.path,
+          key: item.name,
           name: item.name
         }
       })
       setData(tmp)
+      setOriData(tmp)
     })()
   },[])
 
-  const start = () => {
+  const start = async () => {
     setLoading(true);
-    // ajax request after empty completing
-    setTimeout(() => {
-      setSelectedRowKeys([]);
-      setLoading(false);
-    }, 1000);
+
+    const res = await axios.post('/api/audios/download_in_zip',{
+      filenames: selectedRowKeys
+    },{
+      responseType: 'blob'
+    })
+
+    const url = window.URL.createObjectURL(new Blob([res.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    const contentDisposition = res.headers['content-disposition'];
+    let filename = 'default-filename.zip'; // Default name if no content-disposition header
+
+    // Extract filename from HTTP headers if available
+    if (contentDisposition) {
+        const filenameMatch = contentDisposition.match(/filename="?(.+)"?\b/);
+        if (filenameMatch.length >= 2) {
+            filename = filenameMatch[1];
+        }
+    }
+
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url); // Clean up
+
+    setSelectedRowKeys([]);
+    setLoading(false);
   };
 
   const onSelectChange = (newSelectedRowKeys) => {
-    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
     setSelectedRowKeys(newSelectedRowKeys);
   };
 
@@ -81,14 +108,31 @@ const App = () => {
     selectedRowKeys,
     onChange: onSelectChange,
   };
+
   const hasSelected = selectedRowKeys.length > 0;
+
+  const onSearch = (value, _e, info) => {
+    if(value == ''){
+      setData(oriData)
+    }else{
+      let tmp = data.filter(item => item.name.indexOf(value) > -1)
+      console.log(tmp)
+      setData(tmp)
+    }
+  }
 
   return (
     <div>
       <div style={{ marginBottom: 16, textAlign: 'left' }}>
-        <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-          Upload
-        </Button>
+        <Space size="middle">
+            <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
+              Download
+            </Button>
+            <Button type="primary" onClick={()=>{}} disabled={!hasSelected} loading={loading}>
+              Upload
+            </Button>
+            <Search placeholder="Search something" onSearch={onSearch} enterButton />
+        </Space>
         <span style={{ marginLeft: 8 }}>
           {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
         </span>
