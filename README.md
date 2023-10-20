@@ -44,6 +44,7 @@ More information can be found at https://www.researchgate.net/publication/374840
      * `npm start`
      * `cd client && npm start`
   6. You should now be able to open the main entry point and dashboard via http://localhost:3001 and the admin dashboard via http://localhost:3001/admin
+  7. Once installed, the following file can be used as an example of scripts to be loaded in the database from the admin page: https://github.com/Neuro-Logical/HermeSpeechRecorder/blob/master/slurp_example_scripts.csv
 
 
 ### Dependencies
