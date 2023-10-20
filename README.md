@@ -33,7 +33,7 @@ More information can be found at https://www.researchgate.net/publication/374840
 ### Installing
 
 * For local installations, please follow the instructions below:
-  1. Clone your desired version of this AtypicalSpeech repository. On your local terminal, please run something along the lines of ```git clone https://github.com/forrestpark/AtypicalSpeech.git```
+  1. Clone your desired version of this AtypicalSpeech repository. On your local terminal, please run something along the lines of ```git clone https://github.com/Neuro-Logical/HermeSpeechRecorder.git```
   2. Install necessary packages and libraries to run the cloned repository, one pack for server side code and another for client side. To do this, from the repository’s root folder AtypicalSpeech, please run `npm install` and `cd client && npm install`.
   3. Download and install MySQL for our server side code and database to work. Please download MySQL and MySQL Workbench, respectively, from the following links:
      * MySQL: https://dev.mysql.com/downloads/mysql/
