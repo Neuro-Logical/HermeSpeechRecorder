@@ -26,6 +26,10 @@ with atypical speech using this open-source tool.
 
 More information can be found at https://www.researchgate.net/publication/374840882_HERMESPEECH_RECORDER_A_NEW_OPEN-SOURCE_WEB_PLATFORM_TO_RECORD_SPEECH_TO_THE_CLOUD#fullTextFileContent
 
+## Design Doc
+
+For external interests on engineering and design details of our application, please refer to our [external design doc](https://docs.google.com/document/d/1T_22ahyYYdOlzsMLt4Q3A4Yw1VCEKZuCFdr2sNa5LF8/edit?usp=sharing)
+
 ## Getting Started
 
 
