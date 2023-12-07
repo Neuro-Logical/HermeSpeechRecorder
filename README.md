@@ -28,7 +28,7 @@ More information can be found at https://www.researchgate.net/publication/374840
 
 ## Design Doc
 
-For external interests on engineering and design details of our application, please refer to our [external design doc](https://docs.google.com/document/d/1T_22ahyYYdOlzsMLt4Q3A4Yw1VCEKZuCFdr2sNa5LF8/edit?usp=sharing)
+For external interests on engineering and design details of our application, please refer to our [external design doc](https://github.com/Neuro-Logical/HermeSpeechRecorder/blob/884846cc0c154ec55bb5b00afd70d81d2b0baebc/HermeSpeech_%20External%20Design%20Doc.pdf)
 
 ## Getting Started
 
