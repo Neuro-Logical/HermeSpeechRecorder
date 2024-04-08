@@ -7,7 +7,7 @@ router.get('/admin', adminAuth, (_, res) => {
     res.send("AdminUser")
 });
 
-// router.post('/admin/register', ctrl.register);
+router.post('/admin/register', ctrl.register);
 router.post('/admin/login', ctrl.login);
 
 
